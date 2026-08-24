@@ -8,7 +8,6 @@ use App\Lead;
 use App\Consultores;
 use App\Empreendimento;
 
-include __DIR__ . '../../../../mautic/vendor/autoload.php'; 
 
 use Mautic\Auth\ApiAuth;
 use Mautic\MauticApi;

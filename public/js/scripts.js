@@ -165,6 +165,15 @@ const generatetSigla = (name) => {
   }
 }
 
+const formatUtm = (origin, content, source) => {
+  const utm = [origin, content, source].filter(value => value != null && value !== '');
+
+  if (!utm.length) return '-';
+
+  return utm.join(' - ');
+}
+
+
 
 let isemptytHistoric = 0;
 const handleLoadLeadInfo = (url) =>{
@@ -194,6 +203,7 @@ const handleLoadLeadInfo = (url) =>{
       $('#lead-mensagem').html(data.comments);
       $('#lead-empreendimento').html(data.empreendimento);
       $('#lead-origin').html(data.origin);
+      $('#lead-origin').html(formatUtm(data.origin,data.utm_content,data.utm_source));
 
       $('select[name="consultor-campo"]').attr('data-lead', data.id);
 

@@ -51,6 +51,12 @@
         <input type="text" name="income" class="form-control" readOnly value="{{$lead->income}}"  />
       </div>
 
+      <div class="col-md-6 col-xl-4 form-group">
+        <label>Empreendimento</label>
+        <input type="text" name="income" class="form-control" readOnly value="{{$lead->empreendimento}}"  />
+      </div>
+
+
       <div class="col-lg-12 form-group">
         <label>Mensagem</label>
         <textarea name="comments" readOnly class="form-control">{{$lead->comments}}</textarea>
@@ -67,7 +73,7 @@
       </div>
     </div>
   @endif
-  
+
 
 </div>
 </div>
